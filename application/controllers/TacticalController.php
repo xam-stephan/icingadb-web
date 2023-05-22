@@ -92,5 +92,6 @@ class TacticalController extends Controller
         parent::prepareSearchFilter($query, $search, $filter);
 
         $filter->add(Filter::like('host.name_ci', "*$search*"));
+        $filter->add(Filter::like('host.display_name', "*$search*"));
     }
 }
